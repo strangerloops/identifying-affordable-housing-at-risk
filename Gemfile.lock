@@ -1,0 +1,49 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    Ascii85 (1.0.2)
+    afm (0.2.2)
+    coderay (1.1.1)
+    hashery (2.1.2)
+    method_source (0.8.2)
+    mini_portile2 (2.1.0)
+    nokogiri (1.6.8)
+      mini_portile2 (~> 2.1.0)
+      pkg-config (~> 1.1.7)
+    pdf-reader (1.4.0)
+      Ascii85 (~> 1.0.0)
+      afm (~> 0.2.1)
+      hashery (~> 2.0)
+      ruby-rc4
+      ttfunk
+    pkg-config (1.1.7)
+    pry (0.10.4)
+      coderay (~> 1.1.0)
+      method_source (~> 0.8.1)
+      slop (~> 3.4)
+    roo (2.4.0)
+      nokogiri (~> 1)
+      rubyzip (~> 1.1, < 2.0.0)
+    roo-xls (1.0.0)
+      nokogiri
+      roo (>= 2.0.0beta1, < 3)
+      spreadsheet (> 0.9.0)
+    ruby-ole (1.2.12)
+    ruby-rc4 (0.1.5)
+    rubyzip (1.2.0)
+    slop (3.6.0)
+    spreadsheet (1.1.2)
+      ruby-ole (>= 1.0)
+    ttfunk (1.4.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  pdf-reader
+  pry
+  roo
+  roo-xls
+
+BUNDLED WITH
+   1.12.5
