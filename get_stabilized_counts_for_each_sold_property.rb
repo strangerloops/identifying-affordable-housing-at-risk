@@ -18,8 +18,13 @@ module StabilizationCounts
           next unless bbl
           next if bbl == previous_bbl
           previous_bbl = bbl
-          # taxbill = download_file_from_url(taxbill_url_for(bbl), "taxbills/#{bbl}.pdf")
-          taxbill = File.open("taxbills/#{bbl}.pdf") rescue next
+
+          # download all the tax bills; comment this and uncomment line below if you already have them
+          taxbill = download_file_from_url(taxbill_url_for(bbl), "taxbills/#{bbl}.pdf")
+
+          # comment line above and uncomment line below if you already have the tax bills
+          # taxbill = File.open("taxbills/#{bbl}.pdf") rescue next
+
           stabilized_count_for_bbl = stabilization_count_from taxbill
       
           print '.'
