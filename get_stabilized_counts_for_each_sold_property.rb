@@ -19,15 +19,15 @@ module StabilizationCounts
           next if bbl == previous_bbl
           previous_bbl = bbl
 
-          # download all the tax bills; comment this and uncomment line below if you already have them
-          taxbill = download_file_from_url(taxbill_url_for(bbl), "taxbills/#{bbl}.pdf")
+          # download all the tax bills; comment the line below and uncomment the following one if you already have them
+          # taxbill = download_file_from_url(taxbill_url_for(bbl), "taxbills/#{bbl}.pdf")
 
           # comment line above and uncomment line below if you already have the tax bills
-          # taxbill = File.open("taxbills/#{bbl}.pdf") rescue next
+          taxbill = File.open("taxbills/#{bbl}.pdf") rescue next
 
           stabilized_count_for_bbl = stabilization_count_from taxbill
-      
-          print '.'
+          puts stabilized_count_for_bbl
+          # print '.'
           csv << [bbl, sale['neighborhood'], stabilized_count_for_bbl, sale['residential_units'], sale['sale_date'], sale['sale_price']]
         end
       end

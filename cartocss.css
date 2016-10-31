@@ -1,0 +1,64 @@
+/** choropleth visualization */
+
+#housing_at_risk{
+  marker-fill-opacity: 0.8;
+  marker-line-color: #FFF;
+  marker-line-width: 1;
+  marker-line-opacity: 1;
+  marker-width: 10;
+  marker-fill: #FFFFB2;
+  marker-allow-overlap: true;
+}
+
+#housing_at_risk [ leverage <= 3] {
+  marker-fill: #B10026;
+}
+#housing_at_risk [ leverage <= 2.5] {
+  marker-fill: #E31A1C;
+}
+#housing_at_risk [ leverage <= 2] {
+  marker-fill: #FC4E2A;
+}
+#housing_at_risk [ leverage <= 1.5] {
+  marker-fill: #FD8D3C;
+}
+#housing_at_risk [ leverage <= 1.2] {
+  marker-fill: #FEB24C;
+}
+#housing_at_risk [ leverage <= 1] {
+  marker-fill: #FED976;
+}
+#housing_at_risk [ leverage <= 0.8] {
+  marker-fill: #FFFFB2;
+}
+
+#housing_at_risk [ stabilization <= 1.0] {
+  marker-fill-opacity: 1;
+}
+#housing_at_risk [ stabilization <= 0.9] {
+  marker-fill-opacity: 0.9;
+}
+#housing_at_risk [ stabilization <= 0.8] {
+  marker-fill-opacity: 0.8;
+}
+#housing_at_risk [ stabilization <= 0.7] {
+  marker-fill-opacity: 0.7;
+}
+#housing_at_risk [ stabilization <= 0.6] {
+  marker-fill-opacity: 0.6;
+}
+#housing_at_risk [ stabilization <= 0.5] {
+  marker-fill-opacity: 0.5;
+}
+#housing_at_risk [ stabilization <= 0.4] {
+  marker-fill-opacity: 0.4;
+}
+#housing_at_risk [ stabilization <= 0.3] {
+  marker-fill-opacity: 0.3;
+}
+#housing_at_risk [ stabilization <= 0.2] {
+  marker-fill-opacity: 0.2;
+}
+#housing_at_risk [ stabilization <= 0.1] {
+  marker-fill-opacity: 0.1;
+}

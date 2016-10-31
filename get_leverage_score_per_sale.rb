@@ -12,6 +12,7 @@ module Leverage
       
       leverage = ((sale['sale_price'].to_f / sale['total_residential_count'].to_f) / mean_for_that_neighborhood)
       stabilization = (sale['rs_count'].to_f / sale['total_residential_count'].to_f)
+      binding.pry
       leverage = 0.0 if leverage.nan?
       stabilization = 0.0 if stabilization.nan?
       next if stabilization > 1
